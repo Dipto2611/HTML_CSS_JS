@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check_Email</title>
+</head>
+
+<body>
+    <h2>Email Checker</h2>
+    <input type="text" id="email" placeholder="Enter your email">
+    <button onclick="validateEmail()">Checker</button>
+
+    <script>
+        function validateEmail() {
+            
+            let email = document.getElementById("email").value;
+
+            if (email === "") {
+                alert("Email field cannot be empty!");
+            } else {
+                alert("Email entered: " + email);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

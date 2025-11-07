@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checker</title>
+</head>
+
+<body>
+    <h2>Parity Checker</h2>
+    <button onclick="check()"> Check Even/Odd </button>
+
+    <script>
+
+        function check() {
+            let num = prompt("Enter No to check parity:")
+
+            num = Number(num)
+
+
+            if (num % 2 === 0) {
+                alert("Its a even no " + num)
+
+            }
+            else {
+                alert("Its a odd no "+ num)
+
+            }
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

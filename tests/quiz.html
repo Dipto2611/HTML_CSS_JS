@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+    }
+
+    .quiz {
+      width: 320px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    button {
+      display: inline-block;
+      margin: 8px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: green;
+    }
+
+    #next {
+      margin-top: 10px;
+      background: dodgerblue;
+    }
+
+    #next:hover {
+      background: blue;
+    }
+
+    #res {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="quiz">
+    <h2 id="question">Loading...</h2>
+    <div id="options"></div>
+    <p id="res"></p>
+    <button id="next" onclick="nextQ()">Next</button>
+  </div>
+
+  <script>
+    const quiz = [
+      { q: "1) HTML stands for?", a: ["Hyper Text Markup Language", "High Text Machine Language"], c: 0 },
+      { q: "2) CSS is used for?", a: ["Styling webpages", "Connecting database"], c: 0 },
+      { q: "3) JS stands for?", a: ["Java Source", "JavaScript"], c: 1 }
+    ];
+
+    let i = 0, score = 0;
+    const qEl = document.getElementById("question");
+    const optEl = document.getElementById("options");
+    const res = document.getElementById("res");
+
+    function showQ() {
+      res.textContent = "";
+      const q = quiz[i];
+      qEl.textContent = q.q;
+      optEl.innerHTML = q.a.map((opt, idx) =>
+        `<button onclick="check(${idx})">${opt}</button>`
+      ).join("");
+    }
+
+    function check(ans) {
+      if (ans === quiz[i].c) {
+        res.textContent = "✅ Correct!";
+        score++;
+      } else {
+        res.textContent = "❌ Wrong!";
+      }
+    }
+
+    function nextQ() {
+      i++;
+      if (i < quiz.length) {
+        showQ();
+      } else {
+        qEl.textContent = "🎉 Quiz Over!";
+        optEl.innerHTML = "";
+        res.textContent = `Your Score: ${score} / ${quiz.length}`;
+        document.getElementById("next").style.display = "none";
+      }
+    }
+
+    showQ();
+  </script>
+</body>
+</html>

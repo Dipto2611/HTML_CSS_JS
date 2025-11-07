@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Color Changer</title>
+</head>
+<body>
+  <h2>The button to change background color:</h2>
+  <br>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    // List of colors (array)
+    let colors = ["red", "green", "blue", "yellow","pink","cyan","violet","purple"];
+    let index = 0; // to track current color
+
+    function changeColor() {
+      document.body.style.backgroundColor = colors[index];
+      index++; // move to next color
+
+      // Reset to first color when we reach the end
+      if (index >= colors.length) {
+        index = 0;
+      }
+    }
+  </script>
+</body>
+</html>

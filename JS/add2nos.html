@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summation</title>
+</head>
+
+<body>
+    <h3>Additon of 2 nos:</h3>
+
+    <!-- this line is must -->
+    <button onclick="addnum()">Add</button>
+
+
+    <script>
+        function addnum() {
+            // take input but its str tho
+            let n1 = prompt("enter 1st no")
+            let n2 = prompt("enter 2nd no")
+
+            //converrsion of str to no
+            n1 = Number(n1)
+            n2 = Number(n2)
+
+            //for i/p vars we take let
+            let sum = n1 + n2
+
+            alert("sum is: "+ sum)
+
+        }
+    </script>
+
+</body>
+
+</html>
