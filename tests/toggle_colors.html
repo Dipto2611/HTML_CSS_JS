@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Toggle Color</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      transition: 0.4s;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="toggleColor()">Change Color</button>
+
+  <script>
+    let colors = ["white", "lightgreen", "red", "cyan"]; // 3 colors
+    let index = 0;
+
+    function toggleColor() {
+      document.body.style.backgroundColor = colors[index];
+      index++;
+
+      if (index >= colors.length) {
+        index = 0; // reset to first color again
+      }
+    }
+  </script>
+
+</body>
+
+</html>

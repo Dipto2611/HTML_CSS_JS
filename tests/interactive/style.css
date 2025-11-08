@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: navy;
+}

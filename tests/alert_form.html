@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form with Alert</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        form {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: lightblue;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: deepskyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Simple Form</h2>
+    <form onsubmit="showAlert(); return false;">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function showAlert() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            alert("Form Submitted!\nName: " + name + "\nEmail: " + email);
+        }
+    </script>
+
+</body>
+
+</html>
