@@ -1,0 +1,1 @@
+Hello, This is an example for Interactive Ajax page without refreshing the page

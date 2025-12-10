@@ -1,0 +1,25 @@
+body{
+    background-color: cornsilk;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+
+
+}
+h2{
+    text-align: center;
+}
+form{
+    background-color:rgba(33, 73, 24, 0.253);
+    padding: 12px;
+    box-shadow: 5px 5px 5px;
+    border-radius: 50px;
+    
+}
+
+#submit{
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+body{
+    background-color: bisque;
+}
+
+header{
+    background-color:lightsalmon;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+section{
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 12px;
+
+}
+section:hover{
+    box-shadow: 8px 8px 18px rgb(227, 98, 98);
+}
+footer:hover{
+    box-shadow: 8px 8px 18px rgb(214, 91, 91);
+}
+
+nav{
+    text-align: center;
+    padding: 10px;
+
+}
+
+footer{
+    margin:25px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 12px;
+
+}
+a{
+    text-decoration: none;
+    background-color:whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+
+}
+
+a:hover{
+    background-color: rgb(210, 107, 73);
+    transition: background-color 0.3s ease-in-out;
+
+}
