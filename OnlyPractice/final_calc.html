@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Easy Calculator</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 30px;
+        }
+        /* s here means the input box */
+        #s {
+            width: 185px;
+            height: 35px;
+            text-align: right;
+            font-size: 18px;
+        }
+
+        button {
+            width: 35px;
+            height: 35px;
+            margin: 4.5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>Calculator</h3>
+
+    <input id="s" readonly><br><br>
+
+    <button onclick="press('7')">7</button>
+    <button onclick="press('8')">8</button>
+    <button onclick="press('9')">9</button>
+    <button onclick="press('/')">/</button><br>
+
+    <button onclick="press('4')">4</button>
+    <button onclick="press('5')">5</button>
+    <button onclick="press('6')">6</button>
+    <button onclick="press('*')">*</button><br>
+
+    <button onclick="press('1')">1</button>
+    <button onclick="press('2')">2</button>
+    <button onclick="press('3')">3</button>
+    <button onclick="press('-')">-</button><br>
+
+    <button onclick="press('0')">0</button>
+    <button onclick="press('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="press('+')">+</button><br>
+
+    <button onclick="clearScreen()" style="width:150px;">C</button>
+
+    <script>
+        function press(x) {
+            document.getElementById("s").value += x;
+        }
+        function clearScreen() {
+            document.getElementById("s").value = "";
+        }
+        function calculate() {
+            let v = document.getElementById("s").value;
+            document.getElementById("s").value = eval(v);
+        }
+    </script>
+
+</body>
+
+</html>
